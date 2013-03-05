@@ -12,7 +12,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(%{__id_u} -n)
 BuildRequires: php-pear
 Requires: php >= 5.3
 Requires: php-pear
-Conflicts: php-pecl-memcached 
+Conflicts: php-pecl-memcached
 Conflicts: php-pecl-memcache
 BuildArch: x86_64
 
@@ -36,7 +36,7 @@ pear -v -c pearrc \
 %install
 rm -rf %{buildroot}
 pear -c pearrc install --nodeps --packagingroot %{buildroot} %{SOURCE0}
-        
+
 # Clean up unnecessary files
 rm pearrc
 rm %{buildroot}/%{peardir}/.filemap
@@ -59,6 +59,10 @@ mkdir -p %{buildroot}/etc/php.d
 tar -xzf %{SOURCE0} AmazonElastiCacheClusterClient-%{version}/memcached.ini
 cp -p AmazonElastiCacheClusterClient-%{version}/memcached.ini %{buildroot}/etc/php.d/memcached.ini
 
+# Install amazon-
+mkdir -p %{buildroot}%{_libdir}/php/modules
+mv -f %{buildroot}%{_libdir}/amazon-elasticache-cluster-client.so %{buildroot}%{_libdir}/php/modules/amazon-elasticache-cluster-client.so
+
 %clean
 rm -rf %{buildroot}
 
@@ -76,5 +80,5 @@ fi
 %defattr(-,root,root)
 %doc docs/AmazonElastiCacheClusterClient/*
 /etc/php.d/*
-%{_libdir}/*
+%{_libdir}/php/modules/amazon-elasticache-cluster-client.so
 %{xmldir}/AmazonElastiCacheClusterClient.xml
