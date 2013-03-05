@@ -3,8 +3,6 @@
 Tested on:
  CentOS 6.3 x86_64
 
-Perform the following on a build box as root.
-
 ## Create a RPM Build Environment
 
 You'll need to perform these tasks:
