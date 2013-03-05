@@ -40,3 +40,7 @@ The resulting RPM will be:
     ~/rpmbuild/RPMS/x86_64/php-pecl-AmazonElastiCacheClusterClient-1.0.1-1.x86_64.rpm
 
 Remember to build the RPM using an unprivileged user! More information on http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guide/ch-creating-rpms.html
+
+## More information
+
+    http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.html
