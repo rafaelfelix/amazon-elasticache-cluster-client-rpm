@@ -15,13 +15,12 @@ You'll need to perform these tasks:
 ### Install Prerequisites for RPM Creation
 
     sudo yum install gcc-c++ php php-pear
-    sudo pear install PEAR_Command_Packaging-0.3.0
 
 ## Download the source code
 
-    Please refer to: http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.html#Appendix.PHPAutoDiscoverySetup.Downloading
+Please refer to: http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.html#Appendix.PHPAutoDiscoverySetup.Downloading
 
-    Put the recently downloaded package in ~/rpmbuild/SOURCES
+Put the recently downloaded package in ~/rpmbuild/SOURCES
 
 ## Put the spec file in place
 
@@ -41,4 +40,6 @@ Remember to build the RPM using an unprivileged user! More information on http:/
 
 ## More information
 
-    http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.html
+    http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/Appendix.PHPAutoDiscoverySetup.htm
+
+Special thanks to http://pear.php.net/package/PEAR_Command_Packaging

@@ -10,7 +10,7 @@ Group: Development/Libraries
 Source0: AmazonElastiCacheClusterClient-%{version}-PHP53-64bit.tgz
 BuildRoot: %{_tmppath}/%{name}-%{version}-root-%(%{__id_u} -n)
 BuildRequires: php-pear
-Requires: php = 5.3
+Requires: php >= 5.3
 Requires: php-pear
 Conflicts: php-pecl-memcached 
 Conflicts: php-pecl-memcache
